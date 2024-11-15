@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Proyecto Avanzado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Encabezado -->
+    <header class="header">
+        <div class="container">
+            <h1>Bienvenido a Mi Proyecto Interactivo</h1>
+            <p>¡Explora el diseño y las funcionalidades avanzadas que he preparado para ti!</p>
+        </div>
+    </header>
+
+    <!-- Sección de Tarjetas -->
+    <section class="cards">
+        <div class="card">
+            <h2>Información Importante</h2>
+            <p>Aquí tienes algunos datos clave. ¡Haz clic para más detalles!</p>
+            <button class="btn" onclick="mostrarDetalles('info')">Mostrar más</button>
+            <div id="info" class="details hidden">
+                <p>Estos son los detalles adicionales que aparecen después de hacer clic.</p>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>Formulario de Registro</h2>
+            <p>Ingresa tus datos para registrarte.</p>
+            <form id="registroForm" onsubmit="return validarFormulario(event)">
+                <input type="text" id="nombre" placeholder="Nombre completo" required>
+                <input type="email" id="email" placeholder="Correo electrónico" required>
+                <input type="password" id="password" placeholder="Contraseña" required>
+                <button type="submit" class="btn">Registrarse</button>
+            </form>
+            <p id="formMessage"></p>
+        </div>
+    </section>
+
+    <!-- API de Clima -->
+    <section class="weather">
+        <h2>Clima Actual</h2>
+        <button class="btn" onclick="obtenerClima()">Obtener Clima</button>
+        <div id="climaInfo" class="hidden"></div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <p>&copy; 2024 Mi Proyecto. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
